@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dragon Float</title>
+  <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/128/6307/6307249.png">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-dark-fantasy">
+  <nav class="main-nav" role="navigation">
+    <div class="nav-brand">
+      <i class="fas fa-dragon"></i> Dragon Float
+    </div>
+    <ul class="nav-list">
+      <li><a href="#home" aria-label="Home"><i class="fas fa-home"></i> Home</a></li>
+      <li class="nav-dropdown">
+        <a href="#animes" aria-label="Animes" class="dropdown-toggle"><i class="fas fa-film"></i> Animes</a>
+        <ul class="dropdown-menu">
+          <li><a href="#action" aria-label="Action Animes">Action</a></li>
+          <li><a href="#fantasy" aria-label="Fantasy Animes">Fantasy</a></li>
+          <li><a href="#sci-fi" aria-label="Sci-Fi Animes">Sci-Fi</a></li>
+          <li><a href="#nostalgia" aria-label="Nostalgia Animes">Nostalgia</a></li>
+        </ul>
+      </li>
+      <li><a href="#about" aria-label="About"><i class="fas fa-info-circle"></i> About</a></li>
+      <li class="nav-dropdown">
+        <a href="#" aria-label="Themes" class="dropdown-toggle"><i class="fas fa-palette"></i> Themes</a>
+        <ul class="dropdown-menu themes-menu">
+          <li>
+            <button onclick="changeTheme('dark-fantasy')" aria-label="Dark Fantasy Theme">
+              <span class="theme-preview"></span>
+              <span class="theme-label">Dark Fantasy</span>
+            </button>
+          </li>
+          <li>
+            <button onclick="changeTheme('earthy-fantasy')" aria-label="Earthy Fantasy Theme">
+              <span class="theme-preview"></span>
+              <span class="theme-label">Earthy Fantasy</span>
+            </button>
+          </li>
+          <li>
+            <button onclick="changeTheme('futuristic-sci-fi')" aria-label="Futuristic Sci-Fi Theme">
+              <span class="theme-preview"></span>
+              <span class="theme-label">Futuristic Sci-Fi</span>
+            </button>
+          </li>
+          <li>
+            <button onclick="changeTheme('vibrant-nostalgia')" aria-label="Vibrant Nostalgia Theme">
+              <span class="theme-preview"></span>
+              <span class="theme-label">Vibrant Nostalgia</span>
+            </button>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <input type="text" id="searchInput" placeholder="Search animes..." aria-label="Search animes" class="search-input">
+  </nav>
+  <div class="gallery" id="animeGallery"></div>
+  <div class="modal" id="animeModal">
+    <div class="modal-content">
+      <span class="close">×</span>
+      <img id="modalImage" src="" alt="Anime Image">
+      <h2 id="modalTitle"></h2>
+      <p class="genres" id="modalGenres"></p>
+      <p class="episodes" id="modalEpisodes"></p>
+      <p class="synopsis" id="modalSynopsis"></p>
+    </div>
+  </div>
+  <div class="loading" id="loading"><i class="fas fa-spinner fa-spin"></i> Loading animes...</div>
+  <button id="loadMore" class="load-more">Load More</button>
+  <footer class="site-footer">
+    <div class="footer-content">
+      Desenvolvido por <a href="https://github.com/opswesley" target="_blank" aria-label="GitHub Profile of opswesley">opswesley</a>
+      <div class="footer-title">
+        <i class="fas fa-dragon"></i> Dragon Float
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
